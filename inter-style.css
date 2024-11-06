@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f7dede;
+    color: #333;
+    font-weight: bold; /* Aplica negrito a todo o texto do site */
+    
+    
+}
+
+
+header {
+    background-color: #a40000;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; /* Ajusta a largura da logo */
+    height: auto; /* Mantém a proporção */
+    margin-right: 10px; /* Espaçamento entre logo e texto */
+}
+
+.club-name {
+    font-size: 24px; /* Tamanho do texto do nome do clube */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.hero {
+    background-image: url('imagens/inter/logo.png');
+    height: 40px; /* Ajusta a altura da seção */
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Muda para coluna para centralizar o texto */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    position: relative;
+    text-align: center;
+}
+
+.play-icon {
+    width: 40px; /* Tamanho do ícone */
+    height: auto; /* Mantém a proporção */
+}
+
+#play-button {
+    position: absolute; /* Posiciona o botão */
+    right: 20px; /* Distância da direita */
+    bottom: -3px; /* Distância do fundo */
+    background: none; /* Remove fundo do botão */
+    border: none; /* Remove borda do botão */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+}
+
+h2 {
+    color: #a40000;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+}
+
+.news-carousel {
+    overflow: hidden;
+    position: relative;
+    height: 700px; /* Altura da seção do carrossel */
+    margin: 20px auto;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-item {
+    display: none; /* Oculta itens inicialmente */
+    flex-direction: column; /* Alinha elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza texto */
+}
+
+.news-item.active {
+    display: flex; /* Mostra apenas o item ativo */
+}
+
+.news-image {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 400px; /* Limita a altura máxima da imagem */
+    object-fit: cover; /* Cobre o espaço sem distorcer a imagem */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+
+.news-item {
+    display: none;
+    text-align: center;
+    font-size: 18px; /* Ajusta o tamanho da fonte das notícias */
+}
+
+.news-item.active {
+    display: block; /* Mostrar apenas o item ativo */
+}
+
+footer {
+    background-color: f7dede(0, 0%, 95%);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+.games-list, .roster-list, .titles-list {
+    display: flex; /* Alinha as seções em linha */
+    flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte se não houver espaço */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+.game, .player, .title {
+    text-align: center; /* Centraliza o texto abaixo das imagens */
+    width: 200px; /* Largura fixa para as imagens */
+}
+
+.game-image, .player-image, .title-image {
+    width: 100%; /* Imagem ocupa toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Cantos arredondados para a imagem */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve para a imagem */
+}
+
+.titles-list {
+    background-color: f7dede; /* Cor de fundo para a seção de títulos */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+#titulos {
+    padding: 20px;
+    text-align: center;
+}
+
+#titulos h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #C00; /* Ajuste a cor conforme a identidade do clube */
+}
+
+.titulos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Distribui os títulos em colunas de tamanho mínimo de 200px */
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.titulo {
+    background-color: #ffcbcb;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.titulo h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.titulo p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Adicionando uma imagem de fundo leve e discreta */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F3F3F3;
+    color: #333;
+    
+    /* Configurações de fundo */
+    background-image: url('imagens/inter/fundo.jfif'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Cobre a tela inteira */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Para que o fundo acompanhe a rolagem */
+    
+    /* Transparência para suavizar o efeito */
+    background-blend-mode: overlay;
+    background-color: rgba(235, 179, 179, 0.8); /* Fundo branco com opacidade */
+}
+
+
